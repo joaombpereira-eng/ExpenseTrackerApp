@@ -8,7 +8,7 @@ export default function AllExpensesScreen() {
     <ExpensesOutput
       expenses={expensesCtx.expenses}
       expensesPeriod="Total"
-      fallbackText="No registered expenses found!"
+      fallbackText="No expenses registered!"
     />
   );
 }

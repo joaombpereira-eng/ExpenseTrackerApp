@@ -6,10 +6,14 @@ import {GlobalStyles} from '../constants/styles';
 import {ExpensesContext} from '../store/expenses-context';
 
 export default function ManageExpensesScreen({route, navigation}) {
+  const expensesCtx = useContext(ExpensesContext);
+
   const editedExpenseId = route.params?.expenseId;
   const isEditing = !!editedExpenseId;
 
-  const expensesCtx = useContext(ExpensesContext);
+  const selectedExpense = expensesCtx.expenses.find(
+    expense => expense.id === editedExpenseId,
+  );
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -41,6 +45,7 @@ export default function ManageExpensesScreen({route, navigation}) {
         onCancel={cancelHandler}
         onSubmit={confirmHandler}
         submitButtonLabel={isEditing ? 'Update' : 'Add'}
+        defaultValues={selectedExpense}
       />
       {isEditing && (
         <View style={styles.deleteContainer}>

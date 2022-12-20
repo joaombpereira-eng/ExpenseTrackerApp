@@ -14,11 +14,17 @@ export default function ManageExpensesScreen({route, navigation}) {
     });
   }, [navigation, isEditing]);
 
-  function deleteExpenses() {}
+  function deleteExpenses() {
+    navigation.goBack();
+  }
 
-  function cancelHandler() {}
+  function cancelHandler() {
+    navigation.goBack();
+  }
 
-  function confirmHandler() {}
+  function confirmHandler() {
+    navigation.goBack();
+  }
 
   return (
     <View style={styles.container}>

@@ -9,6 +9,10 @@ This app allow us to view all our expenses, add expenses, edit expenses and also
 - Navigation & Screens
 - Layouts & Styles
 - Manage Local & App-wide State
+- Connecting a Backend & Working with Remote Data
+- Setting up a Dummy Backend (Firebase)
+- Sending HTTP Requests
+- Handling Loading & Error States
 
 
 ## 🛠 Skills
